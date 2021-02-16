@@ -24,29 +24,27 @@ class Cuboid{
   void firstTask(){
     print('***** First Task *****');
 
-    print("Please enter length of Cuboid:");
+    print('Please enter length of Cuboid:');
     var length = int.parse(stdin.readLineSync());
-    print("Please enter windth of Cuboid:");
+    print('Please enter windth of Cuboid:');
     var width = int.parse(stdin.readLineSync());
-    print("Please enter height of Cuboid:");
+    print('Please enter height of Cuboid:');
     var height = int.parse(stdin.readLineSync());
     
-    print("Surface Area of Cuboid: ${getSurfaceArea(length, width)}");
-    print("Volume: of Cuboid: ${getVolume(length, width, height)}");
+    print('Surface Area of Cuboid: ${getSurfaceArea(length, width, height)}');
+    print('Volume: of Cuboid: ${getVolume(length, width, height)}');
 
   }
 
-  int getSurfaceArea( int length, int width){
-    return length* width;
+  int getSurfaceArea( int length, int width,int height){
+    return 2 * (length * width + length * height + width * height);
   }
 
   int getVolume(int length, int width, int height){
     return length * width * height;
   }
 
-  void volume(int length,int width, int height){
-      print("Volume: ${length * height * width}");
-  }
+
 }
 
 class Cube extends Cuboid{
@@ -58,13 +56,13 @@ class Cube extends Cuboid{
     print('Please enter length of Cube: ');
     var length = int.parse(stdin.readLineSync());
 
-    print('Surface Area of Cube: ${getSurfaceArea(length, length)}');
+    print('Surface Area of Cube: ${getSurfaceArea(length, length , length)}');
     print('Volume of Cube: ${getVolume(length, length, length)}' );
   }
 
   @override
-  int getSurfaceArea(int length,int width){
-    return pow(length, 2);
+  int getSurfaceArea(int length,int width, int height){
+    return pow(length, 2) * 6;
   }
 
   @override
