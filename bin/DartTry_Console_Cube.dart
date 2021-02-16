@@ -3,8 +3,8 @@ import 'dart:math';
 
 void main(List<String> arguments) {
 
-  Cuboid cuboid = new Cuboid(0,0,0);
-  Cube cube = new Cube(0, 0, 0);
+  Cuboid cuboid = new Cuboid(0,0,0); //изначально дефолтный нулевки
+  Cube cube = new Cube(0, 0, 0); //изначально дефолтный нулевки
 
   cuboid.firstTask();
   cube.secondTask();
@@ -31,8 +31,8 @@ class Cuboid{
     print("Please enter height of Cuboid:");
     var height = int.parse(stdin.readLineSync());
     
-    print("Surface Area: ${getSurfaceArea(length, width)}");
-    print("Volume: ${getVolume(length, width, height)}");
+    print("Surface Area of Cuboid: ${getSurfaceArea(length, width)}");
+    print("Volume: of Cuboid: ${getVolume(length, width, height)}");
 
   }
 
